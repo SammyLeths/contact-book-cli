@@ -29,7 +29,7 @@ def show():
         table.add_column("Contact Number", min_width=12, justify="center")
 
         for idx, contact in enumerate(contacts, start=1):
-            table.add_row(str(idx), f'[cyan]{contact[0]}[/cyan]', f'[green]{contact[1]}[/green]')
+            table.add_row(str(idx), f'[cyan]{contact.name}[/cyan]', f'[green]{contact.contact_number}[/green]')
         console.print(table)
 
 
