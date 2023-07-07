@@ -35,13 +35,13 @@ def show():
 
 @app.command(short_help='edits a contact')
 def edit(position: int, name: str = None, contact_number: str = None):
-    typer.echo(f"Editing {position}")
+    typer.echo(f"Edited {position}")
     update(position, name, contact_number)
     show()
 
 @app.command(short_help='removes a contact')
 def remove(position: int):
-    typer.echo(f"Removing {position}")
+    typer.echo(f"Removed {position}")
     delete(position)
     show()
 

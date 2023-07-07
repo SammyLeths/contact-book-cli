@@ -36,6 +36,9 @@ def update(position: int, name: str, contact_number: str) -> None:
 
 def delete(position) -> None:
     count = len(db)
+    if count < 1:
+        print('No data was found')
+
     db.remove(ContactQuery.position == position)
     for pos in range(position+1, count):
         change_position(pos, pos-1)
